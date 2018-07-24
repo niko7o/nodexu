@@ -29,8 +29,10 @@ module.exports.doCreate = (req, res, next) => {
         return user.save();
       }
     })
-    .then(() => {
-      res.render('index/home', {
+    .then((user) => {
+      mailer.confirmSignUp(user);
+
+      res.render('sessions/create', {
         toastr: {
           message: 'User registered!',
           type: 'success'
@@ -76,8 +78,14 @@ module.exports.confirm = (req, res, next) => {
         return user.save();
       }
     })
-    .then(() => {
-      res.redirect("/sessions/create")
+    .then((user) => {
+      res.render('sessions/create', {
+        toastr: {
+          message: `Account ${user.email} activated!`,
+          type: 'success'
+        }
+      })
+      //res.redirect("/sessions/create")
     })
     .catch(error => {
       next(error);
