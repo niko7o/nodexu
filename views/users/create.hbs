@@ -1,0 +1,27 @@
+<form method="post" action="/users/create">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="hello@example.com" name="email"
+          value="{{ user.email}}" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{ user.name}}" placeholder="John Doe" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="************" name="password" value="{{ user.password}}" autocomplete="off">
+      </div>
+
+      <div class="form-group" style="margin-top: 3rem">
+        <button type="submit" class="btn btn-primary">Create user</button>
+      </div>
+    </div>
+  </div>
+</form>

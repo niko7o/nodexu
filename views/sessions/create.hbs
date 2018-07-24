@@ -1,0 +1,18 @@
+<form method="post" action="/sessions/create">
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email" value="{{ user.email}}">
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password" name="password"
+    value="{{ user.name}}">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Log in</button>
+
+  <div>
+    Need an account? <a href="/users/create">Register!</a>
+  </div>
+</form>

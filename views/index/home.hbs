@@ -1,0 +1,11 @@
+{{#if user}}
+    <h3>Hello, {{ user.name}}</h4>
+{{/if}}
+
+<section id="home">
+    <div class="centered">
+        <a href="/users/create"><button type="button" class="btn btn-primary">Register</button></a>
+        <a href="/sessions/create"><button type="button" class="btn btn-primary">Login</button></a>
+        <a href="/users/list"><button type="button" class="btn btn-primary">Show users</button></a>
+    </div>
+</section>

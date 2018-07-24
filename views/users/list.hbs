@@ -1,0 +1,12 @@
+<a href="/"><button type="submit" class="btn btn-primary">Back to home</button></a>
+
+{{#each users as |user|}}
+    <div class="card">
+        <div class="card-body">
+            <p class="card-title">{{ user.name }}</p>
+            <p class="card-text">{{ user.email }}</p>
+            <p class="user-date text-info">{{ datetime user.createdAt }}</p>
+            <span class="user-status">{{ user.active }}</span>
+        </div>
+    </div>
+{{/each}}

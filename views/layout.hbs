@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Our stylesheets -->
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- Quicksand Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+  <!-- Toastr CSS -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <!-- jQuery -->
+  <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Toastr JS Library -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</head>
+
+<body>
+  <section class="container pt-3">
+    {{#if toastr }} 
+      <script>
+        toastr.options.progressBar = true;
+        toastr.options.closeButton = true;
+        toastr.{{ toastr.type }} ('{{ toastr.message }}')
+      </script>
+    {{/if }}
+
+    {{{ body }}}
+  </section>
+</body>
+
+</html>
