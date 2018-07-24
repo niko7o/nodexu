@@ -5,6 +5,7 @@
 {{#each users as |user|}}
     <div class="card is-{{ get_user_status user }}">
         <div class="card-body">
+            <div class="user-avatar"><img src="/images/uploads/{{ user.avatar }}" alt="{{ user.avatar }}"/></div>
             <p class="card-title">{{ user.name }}</p>
             <p class="card-text">{{ user.email }}</p>
             <p class="user-date text-info">{{ datetime user.createdAt }}</p>

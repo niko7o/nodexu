@@ -40,6 +40,13 @@ nav {
 .users .is-primary {
   border-top: 4px solid #007bff; }
 
+.user-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1rem; }
+
 .btn {
   padding: 0.875rem 1.35rem;
   font-size: 15px;

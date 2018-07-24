@@ -5,6 +5,7 @@ module.exports.create = (req, res, next) => {
 }
 
 module.exports.doCreate = (req, res, next) => {
+  console.log(req.body)
   function renderWithErrors(errors) {
     res.status(400).render('sessions/create', {
       user: req.body,
