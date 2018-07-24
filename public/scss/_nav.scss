@@ -1,0 +1,27 @@
+@import 'variables';
+$global-radius: 6px;
+
+nav {
+    background-color: white;
+    border-bottom-left-radius: $global-radius;
+    border-bottom-right-radius: $global-radius;
+
+    ul {
+        margin-top: 0.6rem;
+        li {
+            display: inline;
+            padding: 1.40em;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom: 4px solid $nodexu-blue;
+            }
+        }
+
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

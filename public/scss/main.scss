@@ -1,10 +1,8 @@
+@import 'nav';
 @import 'home';
 @import 'users';
 @import 'bootstrap-resets';
-
-$font-stack: 'Quicksand', sans-serif;
-$primary-color: #333;
-$badass-blue: rgb(62, 167, 253);
+@import 'variables';
 
 body {
     font-family: $font-stack;

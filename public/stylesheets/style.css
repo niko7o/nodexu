@@ -1,3 +1,18 @@
+nav {
+  background-color: white;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px; }
+  nav ul {
+    margin-top: 0.6rem; }
+    nav ul li {
+      display: inline;
+      padding: 1.40em; }
+      nav ul li:hover {
+        cursor: pointer;
+        border-bottom: 4px solid #3ea7fd; }
+    nav ul a:hover {
+      text-decoration: none; }
+
 .centered {
   display: flex;
   justify-content: center;

@@ -15,16 +15,16 @@
   <!-- Toastr JS Library -->
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   <!-- Page title -->
-  <title>{{ title }}</title>
+  <title>Nodexu {{#if title}}- {{title}} {{/if}}</title>
 </head>
 
 <body>
   <nav class="navbar">
     <ul>
-      <li>Home</li>
-      <li>Register</li>
-      <li>Login</li>
-      <li>Users</li>
+      <a href="/"><li>Home</li></a>
+      <a href="/users/create"><li>Register</li></a>
+      <a href="/sessions/create"><li>Login</li></a>
+      <a href="/users/list"><li>Users</li></a>
     </ul>
   </nav>
   <section class="container pt-3">
