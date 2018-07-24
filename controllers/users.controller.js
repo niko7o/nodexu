@@ -23,9 +23,10 @@ module.exports.doCreate = (req, res, next) => {
         user = new User ({
           name: req.body.name,
           email: req.body.email,
-          password: req.body.password
+          password: req.body.password,
+          avatar: req.file.filename
         });
-
+        console.log('Avatar name:', req.file.filename)
         return user.save();
       }
     })

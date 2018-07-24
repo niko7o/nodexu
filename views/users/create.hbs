@@ -1,4 +1,4 @@
-<form method="post" action="/users/create">
+<form method="post" action="/users/create" enctype="multipart/form-data">
   <div class="row">
     <div class="col-sm-12 col-md-6">
       <div class="form-group">
@@ -19,9 +19,14 @@
         <input type="password" class="form-control" id="password" placeholder="************" name="password" value="{{ user.password}}" autocomplete="off">
       </div>
 
-      <div class="form-group" style="margin-top: 3rem">
-        <button type="submit" class="btn btn-primary">Create user</button>
+      <div class="col-sm-12 col-md-6">
+        <label for="avatar">Avatar</label>
+        <input type="file" class="form-control" id="avatar" name="avatar" value="{{ user.avatar }}" autocomplete="off">
       </div>
+    </div>
+
+    <div class="form-group" style="margin-top: 3rem">
+      <button type="submit" class="btn btn-primary">Create user</button>
     </div>
   </div>
 </form>
