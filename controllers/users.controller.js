@@ -29,8 +29,10 @@ module.exports.doCreate = (req, res, next) => {
         return user.save();
       }
     })
-    .then(() => {
-      res.render('index/home', {
+    .then((user) => {
+      mailer.confirmSignUp(user);
+
+      res.render('sessions/create', {
         toastr: {
           message: 'User registered!',
           type: 'success'
@@ -66,5 +68,26 @@ module.exports.listUsers = (req, res, next) => {
 }
 
 module.exports.confirm = (req, res, next) => {
-  //...
+  const token = req.query.token
+
+  User.findOne({ token: token, active: false })
+    .then(async (user) => {
+      if (user) {
+        console.log(`Now activating user ${user.email}`)
+        user.active = true;
+        return user.save();
+      }
+    })
+    .then((user) => {
+      res.render('sessions/create', {
+        toastr: {
+          message: `Account ${user.email} activated!`,
+          type: 'success'
+        }
+      })
+      //res.redirect("/sessions/create")
+    })
+    .catch(error => {
+      next(error);
+    });
 }
