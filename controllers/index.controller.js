@@ -1,3 +1,5 @@
 module.exports.showHome = (req, res, next) => {
-    res.render('index/home')
+    res.render('index/home', {
+        title: 'Home'
+    })
 }

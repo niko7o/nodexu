@@ -42,6 +42,7 @@ module.exports.doCreate = (req, res, next) => {
     .catch(error => {
       if (error instanceof mongoose.Error.ValidationError) {
         res.render('users/create', {
+          title: 'Register',
           user: req.body,
           errors: error.errors,
           toastr: {
@@ -59,7 +60,8 @@ module.exports.listUsers = (req, res, next) => {
   User.find({})
   .then(users => {
     res.render('users/list', {
-      users: users
+      users: users,
+      title: 'User list'
     })
   })
   .catch(error => {
@@ -80,6 +82,7 @@ module.exports.confirm = (req, res, next) => {
     })
     .then((user) => {
       res.render('sessions/create', {
+        title: 'Login',
         toastr: {
           message: `Account ${user.email} activated!`,
           type: 'success'
