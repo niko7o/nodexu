@@ -3,7 +3,7 @@ module.exports = (hbs) => {
         if (user.active) {
             return 'active';
         } else {
-            return 'danger';
+            return 'inactive';
         }
     });
 }
