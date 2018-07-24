@@ -1,69 +1,53 @@
-body {
-    font-family: 'Quicksand', sans-serif;
-    margin: 0;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(
-        to bottom right, 
-        #00e3ff, 
-        #ff009a9e
-    );
-}
-
-a {
-    text-decoration: none;
-}
-
-.btn {
-    padding: 0.875rem 1.35rem;
-    font-size: 15px;
-    margin-right: 1rem;
-}
-
-.form-control {
-    padding: 0.875rem .75rem;
-}
-
-.form-control::placeholder {
-    color: lightgray;
-}
-
 .centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.card {
-    margin: 1em 0;
-}
-
-.card-title {
-    font-weight: bold;
-}
-
-.card-text {
-    margin-bottom: 0;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; }
 
 .user-status {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    padding: 0.5em 1em;
-    font-size: 13px;
-    letter-spacing: 0.3px;
-}
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  padding: 0.5em 1em;
+  font-size: 13px;
+  letter-spacing: 0.3px; }
 
 .user-date {
-    font-size: 12px;
-    position: absolute;
-    bottom: 0;
-    right: 1em;
-}
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 1em; }
+
+.btn {
+  padding: 0.875rem 1.35rem;
+  font-size: 15px;
+  margin-right: 1rem; }
+
+.form-control {
+  padding: 0.875rem .75rem; }
+
+.form-control::placeholder {
+  color: lightgray; }
+
+.card {
+  margin: 1em 0; }
+
+.card-title {
+  font-weight: bold; }
+
+.card-text {
+  margin-bottom: 0; }
 
 #home > .centered {
-    flex-direction: row 
-}
+  flex-direction: row; }
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #00e3ff, #ff009a9e); }
+
+a {
+  text-decoration: none; }

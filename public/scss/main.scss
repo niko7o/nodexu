@@ -1,0 +1,23 @@
+@import 'home';
+@import 'users';
+@import 'bootstrap-resets';
+
+$font-stack: 'Quicksand', sans-serif;
+$primary-color: #333;
+$badass-blue: rgb(62, 167, 253);
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom right, 
+        #00e3ff, 
+        #ff009a9e
+    );
+}
+
+a {
+    text-decoration: none;
+}
