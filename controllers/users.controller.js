@@ -20,13 +20,23 @@ module.exports.doCreate = (req, res, next) => {
           }
         });
       } else {
-        user = new User ({
-          name: req.body.name,
-          email: req.body.email,
-          password: req.body.password,
-          avatar: req.file.filename
-        });
-        console.log('Avatar name:', req.file.filename)
+        if(user.name === process.env.ADMIN_EMAIL) {
+          user = new User({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password,
+            avatar: req.file.filename,
+            role: 'Administrator'
+          });
+        } else {
+          console.log('registering admin user with proper role')
+          user = new User({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password,
+            avatar: req.file.filename
+          });
+        }
         return user.save();
       }
     })
