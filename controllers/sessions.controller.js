@@ -34,10 +34,26 @@ module.exports.doCreate = (req, res, next) => {
           if (error) {
             next(error)
           } else {
-            res.send("Logged in buddy!")
+            res.render('users/list', {
+              toastr: {
+                message: 'You have logged in',
+                type: 'success',
+              }
+            });
           }
         });
       }
     })(req, res, next);
   }
+}
+
+module.exports.delete = (req, res, next) => {
+  req.logout();
+  res.render('index/home', {
+    toastr: {
+      message: 'Logged out succesfully',
+      type: 'success'
+    }
+  });
+  //res.redirect('/sessions/create');
 }
