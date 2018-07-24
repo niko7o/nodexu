@@ -3,16 +3,8 @@ const router = express.Router();
 const usersController = require('../controllers/users.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 
-const multer = require('multer');
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'public/images/uploads')
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.filename)
-    }
-});
-const upload = multer({ storage: storage });
+const multer = require("multer");
+const upload = multer({ dest: './public/images/uploads' });
 
 router.get(
     '/create', 
@@ -20,7 +12,7 @@ router.get(
 );
 
 router.post(
-    '/create', 
+    '/create',
     upload.single('avatar'),
     usersController.doCreate
 );
