@@ -33,6 +33,7 @@ module.exports.doCreate = (req, res, next) => {
       mailer.confirmSignUp(user);
 
       res.render('sessions/create', {
+        title: 'Login',
         toastr: {
           message: 'User registered!',
           type: 'success'
@@ -42,9 +43,9 @@ module.exports.doCreate = (req, res, next) => {
     .catch(error => {
       if (error instanceof mongoose.Error.ValidationError) {
         res.render('users/create', {
-          title: 'Register',
           user: req.body,
           errors: error.errors,
+          title: 'Registration error',
           toastr: {
             message: `User validation errors`,
             type: 'error'
