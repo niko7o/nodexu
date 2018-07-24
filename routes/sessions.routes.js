@@ -4,6 +4,8 @@ const sessionsController = require('../controllers/sessions.controller');
 
 router.get('/create', sessionsController.create);
 
+router.get('/logout', sessionsController.delete);
+
 router.post('/create', sessionsController.doCreate);
 
 module.exports = router;
