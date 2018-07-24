@@ -6,7 +6,7 @@
             <p class="card-title">{{ user.name }}</p>
             <p class="card-text">{{ user.email }}</p>
             <p class="user-date text-info">{{ datetime user.createdAt }}</p>
-            <span class="user-status">{{ user.active }}</span>
+            <span class="user-status badge badge-pill badge-{{ get_user_status user }} badge-pill">{{ user.active }}</span>
         </div>
     </div>
 {{/each}}
