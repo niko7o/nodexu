@@ -13,3 +13,13 @@
     bottom: 0;
     right: 1em;
 }
+
+.users {
+    .is-danger {
+        border-top: 4px solid #dc3545;
+    }
+
+    .is-primary {
+        border-top: 4px solid #007bff;
+    }
+}

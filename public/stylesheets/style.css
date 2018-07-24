@@ -19,6 +19,12 @@
   bottom: 0;
   right: 1em; }
 
+.users .is-danger {
+  border-top: 4px solid #dc3545; }
+
+.users .is-primary {
+  border-top: 4px solid #007bff; }
+
 .btn {
   padding: 0.875rem 1.35rem;
   font-size: 15px;
@@ -48,6 +54,5 @@ body {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(to bottom right, #00e3ff, #ff009a9e); }
-
-a {
-  text-decoration: none; }
+  body a {
+    text-decoration: none; }

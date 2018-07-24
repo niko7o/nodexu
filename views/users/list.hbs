@@ -1,7 +1,9 @@
 <a href="/"><button type="submit" class="btn btn-primary">Back to home</button></a>
 
+<div class="users">
+
 {{#each users as |user|}}
-    <div class="card">
+    <div class="card is-{{ get_user_status user }}">
         <div class="card-body">
             <p class="card-title">{{ user.name }}</p>
             <p class="card-text">{{ user.email }}</p>
@@ -10,3 +12,5 @@
         </div>
     </div>
 {{/each}}
+
+</div>
