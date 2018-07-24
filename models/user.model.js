@@ -17,6 +17,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: 'Password is required',
   },
+  avatar: {
+    type: String,
+    default: 'https://rentnjoy.com/development/wp-content/uploads/1457/86/analyst-placeholder-avatar.png'
+  },
   token: {
     type: String
   },
