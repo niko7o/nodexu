@@ -70,6 +70,9 @@ nav {
 #home > .centered {
   flex-direction: row; }
 
+.googleAuth {
+  margin-top: 1em; }
+
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;

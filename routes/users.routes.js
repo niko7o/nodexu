@@ -4,7 +4,17 @@ const usersController = require('../controllers/users.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 
 const multer = require("multer");
-const upload = multer({ dest: './public/images/uploads' });
+const upload = multer({ 
+    //dest: './public/images/uploads',
+    destination: function (req, file, cb) {
+        cb(null, './public/images/uploads/')
+    },
+    filename: function (req, file, cb) {
+        crypto.pseudoRandomBytes(16, function (err, raw) {
+            cb(null, raw.toString('hex') + Date.now() + '.' + mime.extension(file.mimetype));
+        });
+    }
+});
 
 router.get(
     '/create', 
