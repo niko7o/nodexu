@@ -21,6 +21,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: 'https://rentnjoy.com/development/wp-content/uploads/1457/86/analyst-placeholder-avatar.png'
   },
+  social: {
+    googleId: String
+  },
   token: {
     type: String
   },
