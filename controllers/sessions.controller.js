@@ -67,7 +67,7 @@ module.exports.createWithIDPCallback = (req, res, next) => {
         if (error) {
           next(error)
         } else {
-          res.redirect(`/users`)
+          res.redirect(`/users/list`)
         }
       });
     }
