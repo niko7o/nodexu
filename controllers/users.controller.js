@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const mongoose = require('mongoose');
 const User = require('../models/user.model');
 const mailer = require('../services/mailer.service');
+const path = require('path');
 
 module.exports.create = (req, res, next) => {
   res.render('users/create');
@@ -24,7 +25,7 @@ module.exports.doCreate = (req, res, next) => {
             name: req.body.name,
             email: req.body.email,
             password: req.body.password,
-            avatar: req.file.filename
+            avatar: req.file.filename + path.extname(req.file.originalname)
           });
         
         return user.save();
