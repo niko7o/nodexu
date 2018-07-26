@@ -18,7 +18,10 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh; }
+  margin-top: 1em; }
+
+.idx {
+  z-index: 2; }
 
 .user-status {
   position: absolute;

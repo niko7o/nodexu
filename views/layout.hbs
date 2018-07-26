@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <nav class="navbar">
+  <nav class="navbar idx">
     <ul>
       <a href="/"><li>Home</li></a>
       <a href="/users/create"><li>Register</li></a>
@@ -28,7 +28,7 @@
       {{#if users}}<a href="/sessions/logout"><li>Logout</li></a>{{/if}}
     </ul>
   </nav>
-  <section class="container pt-3">
+  <section class="container pt-3 idx">
     {{#if toastr }} 
       <script>
         toastr.options.progressBar = true;

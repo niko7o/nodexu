@@ -1,9 +1,9 @@
-{{#if user}}
-    <h3>Hello, {{ user.name}}</h4>
-{{/if}}
+{{> map }}
 
 <section id="home">
-     {{> map }}
+    {{#if user}}
+        <h3>Hello, {{ user.name}}</h4>
+    {{/if}}
     <div class="centered">
         <a href="/users/create"><button type="button" class="btn btn-primary">Register</button></a>
         <a href="/sessions/create"><button type="button" class="btn btn-primary">Login</button></a>
